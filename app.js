@@ -136,31 +136,74 @@ let dishes = [
 //2. Create a function that will return all dishes with the cuisine type of "Italian" and a serving size greater than 5.
 //Filter
 
+// function findItalianFoodGreaterThanFive(){
+//     let results = dishes.filter(function(el){
+//         if(el.cuisine === "Italian" && el.servings > 5);
+//     });
+//     return results;
+// }
+// let italianFood= findItalianFood();
+// console.log('Italian Foods:',italianFood )
+
+
+
 //3. Create a function that will return only dishes whose serving id number matches their serving count.
 //Filter
-function servingIdmatchingCount(){
-let results = dishes.filter(function(el){
-    if(el.id == el.servings){
-        return true;
-    }
-    else{
-        return false;
-    }})
-console.log (results)
-return results;
-}
+// function servingIdmatchingCount(){
+// let results = dishes.filter(function(el){
+//     if(el.id == el.servings){
+//         return true;
+//     }
+//     else{
+//         return false;
+//     }})
+// console.log (results)
+// return results;
+// }
 
-servingIdmatchingCount()
-
-
+// servingIdmatchingCount()
 
 
 //4. Create a function that will return only dishes whose serving count is even.
+
+ 
+// function servingCountEven(){
+//     let results = dishes.filter(function(el){
+//         if(el.serving % 2 == 0){
+//             return true;
+//         }
+//         else{
+//             return false;
+//         }})
+    
+//     return results;
+//     }
+    
+//     let EvenServings = servingCountEven();
+//     console.log(EvenServings)
+
+
 //Filter
 
 //5. Create a function that will return dishes whose ingredients array INCLUDES "chickpea".
 //Hint: You do not want to check the array's indexes to find out what the array INCLUDES.
-//Filter
+//Filter 
+
+function chickpeaDishes(){
+    let results = dishes.filter(function(el){
+        if(el.ingredients === "Chickpea"){
+            return true;
+        }
+        else {
+            return false;
+        }
+    })
+    return results;
+}
+let chickpea = chickpeaDishes();
+console.log("Chickpea dishes:", chickpeaDishes)
+
+
 
 //6a. Create a function that will return an array of only the names of the cuisine types. Ie ['Italian', 'Mexican', ...]
 //Map
