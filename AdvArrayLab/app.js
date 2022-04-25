@@ -154,7 +154,7 @@ function findItalianFoodGreaterThanFive(){
      
     return results;
 }
-let italianFood= findItalianFood();
+let italianFood = findItalianFoodGreaterThanFive();
 console.log('Italian Foods:',italianFood )
 
 //3. Create a function that will return only dishes whose serving id number matches their serving count.
@@ -163,9 +163,24 @@ console.log('Italian Foods:',italianFood )
 //4. Create a function that will return only dishes whose serving count is even.
 //Filter
 
+
 //5. Create a function that will return dishes whose ingredients array INCLUDES "chickpea".
 //Hint: You do not want to check the array's indexes to find out what the array INCLUDES.
 //Filter
+function problemFive(){
+    let results = dishes.filter(function(el){
+        if (el.ingredients.includes ("chickpea")) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    })
+    return results;
+}
+let chickpeadishes = problemFive();
+console.log("chickpea dishes:", problemFive);
+
 
 //6a. Create a function that will return an array of only the names of the cuisine types. Ie ['Italian', 'Mexican', ...]
 //Map
@@ -174,6 +189,16 @@ console.log('Italian Foods:',italianFood )
 
 //7. Create a function that will append the cuisine type to the start of the dish's name. Ie, "Italian Pizza"
 //Map 
+function problemSeven(){
+
+    let results = dishes.map(function(el){
+        return `${el.cuisine} ${el.name}`
+    });
+    return results;
+}
+
+///let descriptiveName = cuisineTypeDish();
+console.log('Descriptive Dish Names: ', problemSeven);
 
 //8. Create a function that will append the cuisine type to the start of the dish's name. Then, return only the Vegetarian dish objects. So this function should return objects 11-13 with their names changed to "Vegetarian Lasagna", "Vegetarian Falafel", "Vegetarian Chili"
 //Map, Filter
@@ -189,4 +214,3 @@ console.log('Italian Foods:',italianFood )
 //Must use Reduce, not a loop.
 
 //11. Create a function that will return an array of any objects that do not share a cuisine type with any other objects.
-
