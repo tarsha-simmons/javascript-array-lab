@@ -211,6 +211,14 @@ console.log("chickpea dishes:", chickpeadishes);
 
 //6a. Create a function that will return an array of only the names of the cuisine types. Ie ['Italian', 'Mexican', ...]
 //Map
+function problemSixA(){
+    let results = dishes.map(function(el){
+        return el.cuisine;
+    })
+    return results;
+}
+let dishCuisineTypes = problemSixA();
+console.log('The Cuisine type of the dishes are:', dishCuisineTypes)
 // BONUS: (come back to this after finishing all)
 //6b. Use the filter method to eliminate duplicates, leaving only distinct values in the array
 
@@ -230,15 +238,36 @@ console.log(cuisineNameDish)
 
 //8. Create a function that will append the cuisine type to the start of the dish's name. Then, return only the Vegetarian dish objects. So this function should return objects 11-13 with their names changed to "Vegetarian Lasagna", "Vegetarian Falafel", "Vegetarian Chili"
 //Map, Filter
+function problemEight(){
+
+    let results = dishes.map(function(el){
+        return el.cuisine + ' ' + el.name
+    })
+    let filteredResults = results.filter(function(el){
+        if(el.includes('Vegetarian')){
+            return true;
+        }
+        else{
+            return false
+        }})
+    return filteredResults
+}
+
+let cuisineTypeNames = problemEight();
+console.log('The menu is:', cuisineTypeNames)
 
 
 //BONUS
 
-//5. Create a function that will return dishes whose ingredients array INCLUDES "tomato" OR "cheese".
+//9. Create a function that will return dishes whose ingredients array INCLUDES "tomato" OR "cheese".
 //Hint: You do not want to check the array's indexes to find out what the array INCLUDES.
 //Filter
 
+
+
 //10. Create a function that will return the total serving count of all dishes.
 //Must use Reduce, not a loop.
+
+
 
 //11. Create a function that will return an array of any objects that do not share a cuisine type with any other objects.
