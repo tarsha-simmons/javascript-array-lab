@@ -262,6 +262,14 @@ console.log('The menu is:', cuisineTypeNames)
 //9. Create a function that will return dishes whose ingredients array INCLUDES "tomato" OR "cheese".
 //Hint: You do not want to check the array's indexes to find out what the array INCLUDES.
 //Filter
+function problemNine() {
+    let results = dishes.filter(function(el){
+        return el.ingredients.includes('tomato')||el.ingredients.includes('cheese');
+    })
+    return results;
+}
+let tomatoOrCheese = problemNine();
+console.log('Tomato or Cheese Dishes : ', tomatoOrCheese, '\n' )
 
 
 
